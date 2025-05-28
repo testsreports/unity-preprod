@@ -162,7 +162,7 @@ jobs:
             else
               html_folder="#"
             fi
-            echo "<tr><td>$count</td><td>$formatted_datetime</td><td><a href='Allure_Report/$foldername/'>View Report</a></td><td><a href='$html_folder'>View Report</a></td></tr>" >> index.html
+            echo "<tr><td>$count</td><td>$formatted_datetime</td><td><a href='Allure_Report/$foldername/'>View Report</a></td><td><a href='$html_folder/index.html'>View Report</a></td></tr>" >> index.html
             ((count++))
           done
 
