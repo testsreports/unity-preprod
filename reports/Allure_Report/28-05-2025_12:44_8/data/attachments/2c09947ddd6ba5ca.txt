@@ -1,0 +1,14 @@
+{
+    "paymentMethod": "RTGS",
+    "beneficiaryId": "",
+    "principalAccountNumber": "",
+    "principalIfsc": "",
+    "name": "",
+    "txnAmount": 200000,
+    "transferTime": "TRANSFER_NOW",
+    "remarks": "Transaction initiated at 2025-05-28T07:14:26.254Z",  
+    "txnPassword": "{{transactionPassword}}",
+    "otpClaim": "",
+    "accountType": "",
+    "referenceId": ""
+}
