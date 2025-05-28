@@ -1,0 +1,12 @@
+{
+    "referenceId": "",
+   "accountNumber": "304218422201569",
+    "mobileNumber": "3379203089",
+    "name": "Sammy",
+    "ifsc": "UCBA0003028",
+    "ifscCode": "UCBA0003028",
+    "nickName": "Uco Bank Bene",
+    "bankType": "O",
+    "bankName": "UCO BANK",
+    "otpClaim": ""
+}
