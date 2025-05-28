@@ -1,0 +1,10 @@
+{
+    "accountNumber": "647055723514012",
+    "mobileNumber": "4848059406",
+    "name": "Hildegard",
+    "ifsc": "UCBA0003028",
+    "nickName": "Uco Bank Bene",
+    "bankType": "O",
+    "bankName": "UCO BANK",
+    "ifscCode": "UCBA0003028"
+}
