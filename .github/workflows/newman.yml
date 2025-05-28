@@ -9,9 +9,9 @@ jobs:
 
     env:
       API_KEY: ${{ secrets.POSTMAN_API_KEY }}
-      COLLECTION_ID: ${{ vars.COLLECTION_ID }}
-      ENVIRONMENT_ID: ${{ vars.ENVIRONMENT_ID}}
-      ITERATION_COUNT: 2
+      COLLECTION_ID: 35402997-7adc1e4b-1f6e-4f2f-8393-894468bd3d07
+      ENVIRONMENT_ID: 35402997-8c8d0969-b817-44ad-a906-2d3cd4a9f163
+      ITERATION_COUNT: 3
       REPORT_FILE: index.html
 
     steps:
