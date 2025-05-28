@@ -1,0 +1,12 @@
+{
+    "referenceId": "",
+   "accountNumber": "505895528210173",
+    "mobileNumber": "2226570508",
+    "name": "Savanah",
+    "ifsc": "UCBA0003028",
+    "ifscCode": "UCBA0003028",
+    "nickName": "Uco Bank Bene",
+    "bankType": "O",
+    "bankName": "UCO BANK",
+    "otpClaim": ""
+}
