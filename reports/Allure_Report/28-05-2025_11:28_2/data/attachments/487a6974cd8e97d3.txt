@@ -1,0 +1,4 @@
+level: error, messages: Error parsing JSON response:,Unexpected token '<' at 1:1
+<html>
+^
+level: log, messages: Collection variables set successfully.

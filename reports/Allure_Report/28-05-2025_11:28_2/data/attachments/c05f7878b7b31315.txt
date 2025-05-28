@@ -1,0 +1,33 @@
+{
+    "captcha": "",
+    "captchaValue": "",   
+    "username": "null",
+    "password": "null", 
+    "formId": "12345",
+    "captchaType": "AUDIO_IMAGE",
+    "captchaRefId": "",
+    "sessionContinueFlag":true
+}
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    

@@ -1,0 +1,12 @@
+{
+    "referenceId": "",
+   "accountNumber": "653454819383619",
+    "mobileNumber": "1170717809",
+    "name": "Savion",
+    "ifsc": "UCBA0003028",
+    "ifscCode": "UCBA0003028",
+    "nickName": "Uco Bank Bene",
+    "bankType": "O",
+    "bankName": "UCO BANK",
+    "otpClaim": ""
+}
