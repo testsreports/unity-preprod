@@ -1,0 +1,10 @@
+{
+    "accountNumber": "783568802653333",
+    "mobileNumber": "8791869652",
+    "name": "Jennifer",
+    "ifsc": "UCBA0003028",
+    "nickName": "Uco Bank Bene",
+    "bankType": "O",
+    "bankName": "UCO BANK",
+    "ifscCode": "UCBA0003028"
+}
