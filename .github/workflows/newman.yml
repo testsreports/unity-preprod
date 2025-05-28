@@ -1,0 +1,184 @@
+name: Run Postman Tests and Publish Allure Report
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    env:
+      API_KEY: ${{ secrets.POSTMAN_API_KEY }}
+      COLLECTION_ID: 19071700-ed1f64b8-a02c-4dc6-b6dd-ea31a5cf9bde
+      ENVIRONMENT_ID: 19071700-1512ff82-28ea-4aff-aeb0-8fd67dc0ce2e
+      ITERATION_COUNT: 2
+      REPORT_FILE: newman-report.html
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Newman, Allure, and dependencies
+        run: |
+          set -e
+          npm install -g newman newman-reporter-htmlextra newman-reporter-allure
+          sudo apt-get update -y
+          sudo apt-get install -y default-jre
+          if [ ! -d /opt/allure ]; then
+            wget -q https://github.com/allure-framework/allure2/releases/download/2.24.0/allure-2.24.0.tgz
+            tar -xzf allure-2.24.0.tgz
+            sudo mv allure-2.24.0 /opt/allure
+            sudo ln -sf /opt/allure/bin/allure /usr/bin/allure
+          fi
+          allure --version
+
+      - name: Export Postman Collection and Environment
+        run: |
+          set -e
+          mkdir -p exports
+          echo "Downloading Postman collection and environment..."
+          curl --silent -f -X GET "https://api.getpostman.com/collections/$COLLECTION_ID" -H "X-Api-Key: $API_KEY" -o exports/collection.json
+          curl --silent -f -X GET "https://api.getpostman.com/environments/$ENVIRONMENT_ID" -H "X-Api-Key: $API_KEY" -o exports/environment.json
+          echo "✅ Downloaded collection and environment files."
+
+      - name: Run Newman Tests
+        run: |
+          set -e
+          echo "Running Newman tests with iteration count = $ITERATION_COUNT..."
+          # Run newman, but don't fail workflow even if tests fail - capture exit code
+          newman run exports/collection.json -e exports/environment.json -r allure,htmlextra \
+            --reporter-htmlextra-export $REPORT_FILE \
+            --iteration-count $ITERATION_COUNT || true
+
+          echo "📝 Folder contents after newman run:"
+          ls -la
+          echo "📁 Checking allure-results folder:"
+          if [ -d "allure-results" ] && [ "$(ls -A allure-results)" ]; then
+            echo "✅ allure-results directory exists and is not empty."
+            ls -la allure-results
+          else
+            echo "⚠️ allure-results directory missing or empty!"
+          fi
+
+      - name: Generate timestamp in IST timezone
+        id: timestamp
+        run: |
+          IST_TIME=$(TZ='Asia/Kolkata' date '+%d-%m-%Y_%H:%M')
+          # Append GitHub run number for uniqueness
+          TIMESTAMP="${IST_TIME}_${GITHUB_RUN_NUMBER}"
+          echo "timestamp=$TIMESTAMP" >> $GITHUB_OUTPUT
+          echo "Generated timestamp: $TIMESTAMP"
+
+      - name: Generate Allure Report
+        run: |
+          set -e
+          if [ -d "./allure-results" ] && [ "$(ls -A ./allure-results)" ]; then
+            echo "Generating Allure report..."
+            allure generate ./allure-results --clean -o allure-report
+            echo "✅ Allure report generated successfully."
+            ls -la allure-report
+          else
+            echo "⚠️ No allure-results found to generate report."
+            mkdir -p allure-report
+            echo "<html><body><h2>No Allure report data available</h2></body></html>" > allure-report/index.html
+          fi
+
+      - name: Clean previous gh-pages-temp folder
+        run: |
+          rm -rf gh-pages-temp
+
+      - name: Clone gh-pages branch
+        run: |
+          git clone --depth 1 --branch gh-pages https://x-access-token:${{ secrets.TOKEN_GITHUB }}@github.com/${{ github.repository }} gh-pages-temp
+
+      - name: Copy Reports to gh-pages folder
+        run: |
+          set -e
+          TIMESTAMP=${{ steps.timestamp.outputs.timestamp }}
+          mkdir -p gh-pages-temp/reports/Allure_Report/$TIMESTAMP
+          mkdir -p gh-pages-temp/reports/Html/$TIMESTAMP
+
+          # Copy Allure report if exists and is not empty
+          if [ -d "allure-report" ] && [ "$(ls -A allure-report)" ]; then
+            cp -r allure-report/* gh-pages-temp/reports/Allure_Report/$TIMESTAMP/
+            echo "✅ Copied Allure report to gh-pages."
+          else
+            echo "⚠️ Allure report folder missing or empty, creating placeholder."
+            mkdir -p gh-pages-temp/reports/Allure_Report/$TIMESTAMP
+            echo "<html><body><h2>No Allure report available</h2></body></html>" > gh-pages-temp/reports/Allure_Report/$TIMESTAMP/index.html
+          fi
+
+          # Copy HTML report if exists
+          if [ -f "$REPORT_FILE" ]; then
+            cp $REPORT_FILE gh-pages-temp/reports/Html/$TIMESTAMP/
+            echo "✅ Copied HTML report to gh-pages."
+          else
+            echo "⚠️ HTML report file missing, creating placeholder."
+            mkdir -p gh-pages-temp/reports/Html/$TIMESTAMP
+            echo "<html><body><h2>No HTML report available</h2></body></html>" > gh-pages-temp/reports/Html/$TIMESTAMP/index.html
+          fi
+
+          # Copy CSS for styling reports index
+          cp .github/reports-style.css gh-pages-temp/reports/reports-style.css
+
+      - name: Update Reports Index
+        run: |
+          cd gh-pages-temp/reports
+
+          echo '<!DOCTYPE html>' > index.html
+          echo '<html>' >> index.html
+          echo "<head><meta charset='UTF-8'><title>Test Reports</title><link rel='stylesheet' href='reports-style.css'></head>" >> index.html
+          echo '<body><div class="container">' >> index.html
+          echo '<h1>Test Reports</h1>' >> index.html
+          echo '<table>' >> index.html
+          echo '<tr><th>S. No.</th><th>Test Execution Time</th><th>Allure Report</th><th>HTML Report</th></tr>' >> index.html
+
+          allure_dirs=(Allure_Report/*/)
+          html_dirs=(Html/*/)
+
+          declare -A html_map
+          for html_path in "${html_dirs[@]}"; do
+            foldername=$(basename "$html_path")
+            html_map["$foldername"]="$html_path"
+          done
+
+          count=1
+          for allure_path in "${allure_dirs[@]}"; do
+            foldername=$(basename "$allure_path")
+            datetime_part=$(echo "$foldername" | cut -d'_' -f1-2)
+            dd=$(echo $datetime_part | cut -d'-' -f1)
+            mm=$(echo $datetime_part | cut -d'-' -f2)
+            yyyy=$(echo $datetime_part | cut -d'-' -f3 | cut -d'_' -f1)
+            hhmm=$(echo $datetime_part | cut -d'_' -f2)
+            formatted_date="${yyyy}-${mm}-${dd} ${hhmm}"
+            formatted_datetime=$(date -d "$formatted_date" +"%b %d, %Y %H:%M")
+            if [[ -n "${html_map[$foldername]}" ]]; then
+              html_folder="Html/$foldername"
+            else
+              html_folder="#"
+            fi
+            echo "<tr><td>$count</td><td>$formatted_datetime</td><td><a href='Allure_Report/$foldername/'>View Report</a></td><td><a href='$html_folder'>View Report</a></td></tr>" >> index.html
+            ((count++))
+          done
+
+          echo '</table></div></body></html>' >> index.html
+
+          cd ..
+          git config user.name "Anukool Patel"
+          git config user.email "aanukool.patel@gmail.com"
+          git add reports/index.html reports/reports-style.css reports/Allure_Report reports/Html
+          git commit -m "🔄 Update reports index and add new reports"
+          git push origin gh-pages
+
+
+      - name: Output Report URLs
+        run: |
+          echo "✅ Allure report is available at:"
+          echo "🌐 https://anukool23.github.io/testnewman/reports/Allure_Report/${{ steps.timestamp.outputs.timestamp }}/"
+          echo "✅ HTML extra report is available at:"
+          echo "🌐 https://anukool23.github.io/testnewman/reports/Html/${{ steps.timestamp.outputs.timestamp }}/"
