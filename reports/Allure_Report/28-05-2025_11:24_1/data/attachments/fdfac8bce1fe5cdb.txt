@@ -1,0 +1,9 @@
+{
+    "accountNumbers": [
+        ""
+    ],
+    "statementsFormat": [
+        "PDF"
+    ],
+    "isPdfDownload": true
+}
