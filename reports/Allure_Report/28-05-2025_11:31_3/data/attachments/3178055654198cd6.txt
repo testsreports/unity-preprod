@@ -1,0 +1,12 @@
+{
+    "referenceId": "",
+   "accountNumber": "801814342313946",
+    "mobileNumber": "2292251278",
+    "name": "Griffin",
+    "ifsc": "UCBA0003028",
+    "ifscCode": "UCBA0003028",
+    "nickName": "Uco Bank Bene",
+    "bankType": "O",
+    "bankName": "UCO BANK",
+    "otpClaim": ""
+}
