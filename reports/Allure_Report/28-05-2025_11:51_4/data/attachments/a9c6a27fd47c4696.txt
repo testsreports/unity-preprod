@@ -1,0 +1,15 @@
+{
+    "paymentMethod": "INTRA",
+    "beneficiaryId": "",
+    "principalAccountNumber": "",
+    "principalIfsc": "",
+    "name": "",
+    "txnAmount": 1,
+    "transferTime": "TRANSFER_NOW",
+    "remarks": "Transaction initiated at 2025-05-28T06:21:52.803Z",  
+    "txnPassword": "{{transactionPassword}}",
+    
+    "otpClaim": "",
+    "accountType": "",
+    "referenceId": ""
+}
