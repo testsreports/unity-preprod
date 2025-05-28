@@ -169,8 +169,8 @@ jobs:
           echo '</table></div></body></html>' >> index.html
 
           cd ..
-          git config user.name "Anukool Patel"
-          git config user.email "aanukool.patel@gmail.com"
+          git config user.name "Test Reports"
+          git config user.email "anuanukool23@gmail.com"
           git add reports/index.html reports/reports-style.css reports/Allure_Report reports/Html
           git commit -m "🔄 Update reports index and add new reports"
           git push origin gh-pages
@@ -179,6 +179,6 @@ jobs:
       - name: Output Report URLs
         run: |
           echo "✅ Allure report is available at:"
-          echo "🌐 https://anukool23.github.io/testnewman/reports/Allure_Report/${{ steps.timestamp.outputs.timestamp }}/"
+          echo "🌐 https://testsreports.github.io/testnewman/reports/Allure_Report/${{ steps.timestamp.outputs.timestamp }}/"
           echo "✅ HTML extra report is available at:"
-          echo "🌐 https://anukool23.github.io/testnewman/reports/Html/${{ steps.timestamp.outputs.timestamp }}/"
+          echo "🌐 https://testsreports.github.io/testnewman/reports/Html/${{ steps.timestamp.outputs.timestamp }}/"
