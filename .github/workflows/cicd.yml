@@ -7,15 +7,18 @@ jobs:
   trigger-run:
     runs-on: ubuntu-latest
     steps:
-      - name: SSH into AWS and run container
+      - name: SSH into AWS EC2 and run Docker container
         uses: appleboy/ssh-action@v1.0.0
         with:
-          host: ${{ secrets.AWS_HOST }}
-          username: ec2-user
-          key: ${{ secrets.AWS_SSH_KEY }}
+          host: ${{ secrets.AWS_HOST }}               # e.g. 3.111.222.333
+          username: ec2-user                           # Default for Amazon Linux
+          key: ${{ secrets.AWS_SSH_KEY }}              # Full private key content
+          script_stop: true                            # Stop on any command failure
+          timeout: 120s                                # Optional: Increase if needed
           script: |
+            set -e
             cd /home/ec2-user/your-project-folder
-            git pull
+            git pull origin main                       # Specify branch explicitly
             docker build -t postman-reporter .
             docker run --rm \
               -e API_KEY="${{ secrets.POSTMAN_API_KEY }}" \
