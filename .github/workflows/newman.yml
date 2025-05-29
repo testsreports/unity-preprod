@@ -46,6 +46,9 @@ jobs:
           curl --silent -f -X GET "https://api.getpostman.com/environments/$ENVIRONMENT_ID" -H "X-Api-Key: $API_KEY" -o exports/environment.json
           echo "✅ Downloaded collection and environment files."
 
+      - name: Get public IP
+        run: curl https://api.ipify.org
+      
       - name: Run Newman Tests
         run: |
           set -e
