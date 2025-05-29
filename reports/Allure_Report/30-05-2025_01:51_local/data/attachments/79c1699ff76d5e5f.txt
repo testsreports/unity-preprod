@@ -1,0 +1,3 @@
+level: log, messages: Unity Beneficiaries:,[object Object]
+level: log, messages: Other Bank Beneficiaries:,[object Object]
+level: log, messages: Collection variables set successfully.

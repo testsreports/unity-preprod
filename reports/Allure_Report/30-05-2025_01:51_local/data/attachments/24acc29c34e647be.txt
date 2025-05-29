@@ -1,0 +1,1 @@
+{"status":"success","data":{"message":"OTP Trigger Successfully","referenceId":"c45792ce6c35c47fd2748d548162c372ece57b5ee5a4332dba9134a9a0a0826a","otpValue":"724261","ifscCode":"UNBA0000005"},"error":null,"successfulResponse":true}
