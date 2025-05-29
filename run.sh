@@ -47,8 +47,8 @@ cd gh-pages-temp/reports
 # (Copy your full index.html generation script here)
 cd ../..
 cd gh-pages-temp
-git config user.name "GitHub Runner"
-git config user.email "runner@example.com"
+git config user.name "Tests Reports"
+git config user.email "anuanukool23@gmail.com"
 git add .
 git commit -m "Add test reports for $TIMESTAMP"
 git push origin gh-pages
