@@ -1,0 +1,11 @@
+{
+    "referenceId": "980cb120d311372b749f49abaead7b24c58ee948f03830257ec0eb8792fea169",
+    "ifscCode": "UNBA0000005",
+    "otpClaim": "544276",
+    "accountNumber": "005100100007698",
+    "mobileNumber": "9118865507",
+    "name": "pramila ramesh chanchani",
+    "nickName": "Rajat",
+    "bankType": "U",
+    "bankName": "UNITY"
+}

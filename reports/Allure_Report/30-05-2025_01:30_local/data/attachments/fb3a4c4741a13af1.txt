@@ -1,0 +1,19 @@
+level: log, messages: OTP Value Captured:,161707
+level: log, messages: Reference ID Captured:,351074d29fc6c46923f67c23ac5800e586640fbe1f05dd5c5b0cb3af57ec6a08
+level: log, messages: Status Code:,200
+level: log, messages: Full Response:,{
+  "status": "success",
+  "data": {
+    "referenceId": "351074d29fc6c46923f67c23ac5800e586640fbe1f05dd5c5b0cb3af57ec6a08",
+    "message": "OTP Trigger Successfully",
+    "otpValue": "161707"
+  },
+  "error": null,
+  "successfulResponse": true
+}
+level: log, messages: Status:,success
+level: log, messages: Reference ID:,351074d29fc6c46923f67c23ac5800e586640fbe1f05dd5c5b0cb3af57ec6a08
+level: log, messages: Message:,OTP Trigger Successfully
+level: log, messages: OTP Value:,161707
+level: log, messages: Successful Response:,true
+level: log, messages: Error Field:,

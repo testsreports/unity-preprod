@@ -1,0 +1,15 @@
+{
+    "paymentMethod": "NEFT",
+    "beneficiaryId": "1935ac06-be73-450b-b321-b0bc4539cb9c",
+    "principalAccountNumber": "000112011000013",
+    "principalIfsc": "UNBA0000001",
+    "name": "SURAJ N PEDNEKAR",
+    "txnAmount": 1,
+    "transferTime": "TRANSFER_NOW",
+    "remarks": "Transaction initiated at 2025-05-29T20:01:50.574Z",  
+   "txnPassword": "{{transactionPassword}}",
+
+    "otpClaim": "552319",
+    "accountType": "Savings",
+    "referenceId": "ec34d17a4724c2fcac7fd8b017dfc16652caf15ed4c77a775041611272065d52"
+}

@@ -1,0 +1,15 @@
+{
+    "paymentMethod": "INTRA",
+    "beneficiaryId": "b3bdbb01-d3f1-4cde-ad0e-2c7b390987d8",
+    "principalAccountNumber": "005100100001689",
+    "principalIfsc": "UNBA0000005",
+    "name": "HARGOVIND PURSHOTTAM PANCHAL",
+    "txnAmount": 1,
+    "transferTime": "TRANSFER_NOW",
+    "remarks": "Transaction initiated at 2025-05-29T20:00:39.151Z",  
+    "txnPassword": "{{transactionPassword}}",
+    
+    "otpClaim": "574967",
+    "accountType": "Savings",
+    "referenceId": "0e6fccd3ec694a3f8b2c16a5bf782fd34ed0ae945ac4221950dfa094784538cb"
+}

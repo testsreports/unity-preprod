@@ -1,0 +1,1 @@
+{"status":"success","data":{"txnRefNo":"18045149173","utrNo":"UNBAN25149000041","paymentOrderId":"71548dbe-b35d-4e85-825f-6acf48dca24f"},"error":null,"successfulResponse":true}
