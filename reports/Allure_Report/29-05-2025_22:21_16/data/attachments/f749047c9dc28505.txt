@@ -1,0 +1,14 @@
+{
+    "paymentMethod": "IMPS",
+    "beneficiaryId": "",
+    "principalAccountNumber": "",
+    "principalIfsc": "",
+    "name": "",
+    "txnAmount": 1,
+    "transferTime": "TRANSFER_NOW",
+    "remarks": "Transaction initiated at 2025-05-29T16:51:33.430Z",  
+    "txnPassword": "{{transactionPassword}}",
+    "otpClaim": "",
+    "accountType": "",
+    "referenceId": ""
+}

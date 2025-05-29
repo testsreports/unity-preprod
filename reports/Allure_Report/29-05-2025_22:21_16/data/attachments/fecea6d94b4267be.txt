@@ -1,0 +1,12 @@
+{
+    "referenceId": "",
+   "accountNumber": "362601441303052",
+    "mobileNumber": "5008518340",
+    "name": "Armani",
+    "ifsc": "UCBA0003028",
+    "ifscCode": "UCBA0003028",
+    "nickName": "Uco Bank Bene",
+    "bankType": "O",
+    "bankName": "UCO BANK",
+    "otpClaim": ""
+}
