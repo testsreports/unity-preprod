@@ -1,0 +1,22 @@
+level: log, messages: OTP and Reference ID saved successfully:
+level: log, messages: OTP:,139472
+level: log, messages: Reference ID:,984de61c5ca33edd7e4c5f28523ca0ba51f5741ace306d97d1c70d3623605e63
+level: log, messages: Status Code:,200
+level: log, messages: Full Response:,{
+  "status": "success",
+  "data": {
+    "message": "OTP Trigger Successfully",
+    "referenceId": "984de61c5ca33edd7e4c5f28523ca0ba51f5741ace306d97d1c70d3623605e63",
+    "otpValue": "139472",
+    "ifscCode": "UNBA0000005"
+  },
+  "error": null,
+  "successfulResponse": true
+}
+level: log, messages: Status:,success
+level: log, messages: Message:,OTP Trigger Successfully
+level: log, messages: Reference ID:,984de61c5ca33edd7e4c5f28523ca0ba51f5741ace306d97d1c70d3623605e63
+level: log, messages: OTP Value:,139472
+level: log, messages: IFSC Code:,UNBA0000005
+level: log, messages: Successful Response:,true
+level: log, messages: Error Field:,

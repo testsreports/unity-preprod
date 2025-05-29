@@ -1,0 +1,1 @@
+{"status":"success","data":{"referenceId":"8ab4399d33154aa29178c2bf3efdcbe8148b80c44fe4706c1cae9c1f64da3c9c","otpValue":"422597","code":"REG_S005","message":"OTP Trigger Successfully","customerId":"2466054","role":"Business","isTxnPwdPresent":true},"error":null,"successfulResponse":true}

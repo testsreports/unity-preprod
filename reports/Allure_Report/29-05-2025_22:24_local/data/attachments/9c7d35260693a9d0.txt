@@ -1,0 +1,14 @@
+{
+    "paymentMethod": "IMPS",
+    "beneficiaryId": "1935ac06-be73-450b-b321-b0bc4539cb9c",
+    "principalAccountNumber": "000112011000013",
+    "principalIfsc": "UNBA0000001",
+    "name": "SURAJ N PEDNEKAR",
+    "txnAmount": 1,
+    "transferTime": "TRANSFER_NOW",
+    "remarks": "Transaction initiated at 2025-05-29T16:55:56.335Z",  
+    "txnPassword": "{{transactionPassword}}",
+    "otpClaim": "851234",
+    "accountType": "Savings",
+    "referenceId": "5c49b204fae98da282732c0c05f58151fb6e169060f0bf5badcd4741196a3f3d"
+}
