@@ -1,0 +1,1 @@
+{"status":"success","data":{"timestamp":"2025-05-29T15:55:43.121+00:00","status":403,"error":"Forbidden","path":"/v1/api/payment/beneficiary/delete/validate"},"error":null,"successfulResponse":true}

@@ -1,0 +1,10 @@
+{
+    "accountNumber": "205468519708413",
+    "mobileNumber": "2421875970",
+    "name": "Delphia",
+    "ifsc": "UCBA0003028",
+    "nickName": "Uco Bank Bene",
+    "bankType": "O",
+    "bankName": "UCO BANK",
+    "ifscCode": "UCBA0003028"
+}
