@@ -19,10 +19,10 @@ jobs:
             docker build -t postman-reporter .
             docker run --rm \
               -e API_KEY="${{ secrets.POSTMAN_API_KEY }}" \
-              -e COLLECTION_ID="..." \
-              -e ENVIRONMENT_ID="..." \
+              -e COLLECTION_ID="35402997-88acb0d1-f3f8-442b-9180-153e86e70b50" \
+              -e ENVIRONMENT_ID="35402997-7363e33e-b323-4dc3-b0ce-daddf1bbfbe1" \
               -e TOKEN_GITHUB="${{ secrets.TOKEN_GITHUB }}" \
               -e REPO="${{ github.repository }}" \
-              -e ITERATION_COUNT=3 \
+              -e ITERATION_COUNT=1 \
               -e REPORT_FILE="index.html" \
               postman-reporter
