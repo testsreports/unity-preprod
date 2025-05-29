@@ -1,0 +1,4 @@
+{
+    "details": "SUMMARY",
+     "detailsFor": "ALL"
+}

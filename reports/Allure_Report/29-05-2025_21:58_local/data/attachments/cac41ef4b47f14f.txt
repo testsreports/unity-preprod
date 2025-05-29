@@ -1,0 +1,15 @@
+{
+    "paymentMethod": "INTRA",
+    "beneficiaryId": "b530e36c-c198-48a3-a02a-a969f36f1ef1",
+    "principalAccountNumber": "000112011000013",
+    "principalIfsc": "UNBA0000001",
+    "name": "SURAJ N PEDNEKAR",
+    "txnAmount": 1,
+    "transferTime": "TRANSFER_NOW",
+    "remarks": "Transaction initiated at 2025-05-29T16:30:42.591Z",  
+    "txnPassword": "{{transactionPassword}}",
+    
+    "otpClaim": "418699",
+    "accountType": "Savings",
+    "referenceId": "56f523409f6a70fda3f3c12cffa415e70782d1657d4f51a7e706eadb9bbe9275"
+}

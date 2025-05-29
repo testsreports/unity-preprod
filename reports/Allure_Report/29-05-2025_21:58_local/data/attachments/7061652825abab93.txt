@@ -1,0 +1,12 @@
+{
+    "referenceId": "06c7fd5981d61f4782a1daf3ad3e10e71a14cff3782947ed3a704e3f1be701d7",
+   "accountNumber": "799342398001075",
+    "mobileNumber": "6419305021",
+    "name": "David",
+    "ifsc": "UCBA0003028",
+    "ifscCode": "UCBA0003028",
+    "nickName": "Uco Bank Bene",
+    "bankType": "O",
+    "bankName": "UCO BANK",
+    "otpClaim": "980499"
+}

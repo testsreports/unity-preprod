@@ -1,0 +1,14 @@
+{
+    "paymentMethod": "IMPS",
+    "beneficiaryId": "94025d49-8856-49bf-96bf-fb4a352c428a",
+    "principalAccountNumber": "005100100001689",
+    "principalIfsc": "UNBA0000005",
+    "name": "HARGOVIND PURSHOTTAM PANCHAL",
+    "txnAmount": 1,
+    "transferTime": "TRANSFER_NOW",
+    "remarks": "Transaction initiated at 2025-05-29T16:29:11.436Z",  
+    "txnPassword": "{{transactionPassword}}",
+    "otpClaim": "858649",
+    "accountType": "Savings",
+    "referenceId": "4fd630f70374c1d768bb3c1fa1d3df0b892c29ce89a30f982c4e82388817106e"
+}

@@ -1,0 +1,15 @@
+{
+    "paymentMethod": "NEFT",
+    "beneficiaryId": "94025d49-8856-49bf-96bf-fb4a352c428a",
+    "principalAccountNumber": "005100100001689",
+    "principalIfsc": "UNBA0000005",
+    "name": "HARGOVIND PURSHOTTAM PANCHAL",
+    "txnAmount": 1,
+    "transferTime": "TRANSFER_NOW",
+    "remarks": "Transaction initiated at 2025-05-29T16:29:06.632Z",  
+   "txnPassword": "{{transactionPassword}}",
+
+    "otpClaim": "500721",
+    "accountType": "Savings",
+    "referenceId": "e2825ef1baa6ef1c263ba7e10bff01590b9d7b89006b5e302dfd7c6954d510cf"
+}
