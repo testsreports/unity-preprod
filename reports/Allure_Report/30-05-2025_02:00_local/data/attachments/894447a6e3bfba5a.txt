@@ -1,0 +1,1 @@
+{"status":"success","data":{"statusCode":400,"errorCode":"ERR400","message":"2025-05-29 20:30:54","errors":["Please enter valid IFSC Code"]},"error":null,"successfulResponse":true}

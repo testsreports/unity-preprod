@@ -1,0 +1,13 @@
+level: log, messages: Status Code:,200
+level: log, messages: Full Response:,{
+  "status": "success",
+  "data": {
+    "message": "Beneficiary deleted successfully"
+  },
+  "error": null,
+  "successfulResponse": true
+}
+level: log, messages: Status:,success
+level: log, messages: Message:,Beneficiary deleted successfully
+level: log, messages: Successful Response:,true
+level: log, messages: Error Field:,

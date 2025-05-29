@@ -1,0 +1,12 @@
+{
+    "referenceId": "18915ab5872324d27c833e71bf6e0c241a859bd3f91174509d21b9c6ca90473f",
+   "accountNumber": "865067971791687",
+    "mobileNumber": "5699720621",
+    "name": "Verdie",
+    "ifsc": "UCBA0003028",
+    "ifscCode": "UCBA0003028",
+    "nickName": "Uco Bank Bene",
+    "bankType": "O",
+    "bankName": "UCO BANK",
+    "otpClaim": "929863"
+}
