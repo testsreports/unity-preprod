@@ -1,7 +1,0 @@
-level: info, messages: ✅ Data being used for API:,[object Object]
-level: info, messages: ✅ Collection variables updated: otpValue, referenceId, customerId, role
-level: log, messages: 🔹 OTP Value:,334558
-level: log, messages: 🔹 Reference ID:,ea8a7127c4c32fea7a0a82d4c91dde78274bcd5841d553ff66a592fd47864652
-level: log, messages: 🔹 Customer ID:,131918
-level: log, messages: 🔹 Role:,Retail
-level: log, messages: 🛠️ Derived Account Type:,SAVINGS

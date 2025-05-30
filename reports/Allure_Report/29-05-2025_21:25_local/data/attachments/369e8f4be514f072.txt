@@ -1,3 +1,0 @@
-level: warn, messages: No eligible account found.
-level: warn, messages: Contact details missing.
-level: log, messages: Collection variables set successfully.

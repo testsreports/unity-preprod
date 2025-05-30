@@ -1,9 +1,0 @@
-{
-    "accountNumbers": [
-        "005100100001689"
-    ],
-    "statementsFormat": [
-        "PDF"
-    ],
-    "isPdfDownload": true
-}

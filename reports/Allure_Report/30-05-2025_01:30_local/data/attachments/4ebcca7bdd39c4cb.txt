@@ -1,4 +1,0 @@
-{
-    "otpClaim": "943168",
-    "referenceId": "4643910f526c83672038fcaff46cb38fa11ae24fdc9b5f3a2ea9d7762d912556"
-}

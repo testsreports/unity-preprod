@@ -1,9 +1,0 @@
-{
-    "accountNumbers": [
-        ""
-    ],
-    "statementsFormat": [
-        "EXCEL"
-    ],
-    "isExcelDownload": true
-}

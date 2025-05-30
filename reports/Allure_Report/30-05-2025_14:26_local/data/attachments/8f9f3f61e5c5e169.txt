@@ -1,1 +1,0 @@
-{"status":"success","data":{"referenceId":"ec3ab3454b38b6d9428f9133f3f28c691bf5638c38f4adc12274c130b2905593","message":"OTP Trigger Successfully","otpValue":"343067"},"error":null,"successfulResponse":true}

@@ -1,2 +1,0 @@
-level: log, messages: OTP Value Captured:,414683
-level: log, messages: Reference ID Captured:,a4ad5e2b104d4b6461e6dcdb272868e8ddb6592b169a74a9830272e375dcd556

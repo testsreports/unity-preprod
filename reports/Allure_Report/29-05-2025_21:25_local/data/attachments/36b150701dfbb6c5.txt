@@ -1,4 +1,0 @@
-level: log, messages: Payee Name stored:,
-level: log, messages: Status:,success
-level: log, messages: Successful Response:,true
-level: log, messages: Error Field:,

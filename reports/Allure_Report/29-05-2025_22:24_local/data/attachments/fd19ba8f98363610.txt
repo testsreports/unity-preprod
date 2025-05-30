@@ -1,7 +1,0 @@
-{
-  "otpClaim": "341285",
-  "referenceId": "455eb494b10c61fea4d32f8fdc458611f2a84d94936077b7fcd755a53473ae10",
-  "beneficiaryIds": [
-    "890ea54d-3140-44a9-ba9f-e97640912dfe"
-  ]
-}

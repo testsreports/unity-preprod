@@ -1,4 +1,0 @@
-{
-    "otpClaim": "{{otpValue}}",
-    "referenceId": "{{referenceId}}"
-}

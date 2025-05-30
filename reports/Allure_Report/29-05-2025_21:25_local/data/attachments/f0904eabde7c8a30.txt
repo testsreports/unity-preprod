@@ -1,6 +1,0 @@
-level: log, messages: OTP and Reference ID saved successfully:
-level: log, messages: OTP:,
-level: log, messages: Reference ID:,
-level: log, messages: Status:,success
-level: log, messages: Successful Response:,true
-level: log, messages: Error Field:,

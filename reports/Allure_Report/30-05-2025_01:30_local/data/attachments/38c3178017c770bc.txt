@@ -1,1 +1,0 @@
-{"status":"success","data":{"message":"Payee Added","payeeName":"Katheryn","creationDate":"2025-05-29T20:02:14.016814038Z"},"error":null,"successfulResponse":true}
