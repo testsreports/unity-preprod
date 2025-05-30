@@ -1,0 +1,17 @@
+level: log, messages: Status Code:,200
+level: log, messages: Full Response:,{
+  "status": "success",
+  "data": {
+    "txnRefNo": "68015149243",
+    "utrNo": "N/A",
+    "paymentOrderId": "2ef7cc66-2818-4bc8-8c98-ac9a3cffb117"
+  },
+  "error": null,
+  "successfulResponse": true
+}
+level: log, messages: Status:,success
+level: log, messages: Transaction Reference Number:,68015149243
+level: log, messages: UTR Number:,N/A
+level: log, messages: Payment Order ID:,2ef7cc66-2818-4bc8-8c98-ac9a3cffb117
+level: log, messages: Successful Response is true:,true
+level: log, messages: Error Field:,

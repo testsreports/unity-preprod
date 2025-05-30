@@ -1,0 +1,3 @@
+level: log, messages: Collection variables set successfully.
+level: log, messages: ✅ Savings account list exists:,[object Object],[object Object]
+level: log, messages: 🔹 Account Type Identified:,Savings

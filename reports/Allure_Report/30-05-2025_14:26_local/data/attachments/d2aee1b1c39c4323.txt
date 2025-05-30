@@ -1,0 +1,15 @@
+{
+    "paymentMethod": "RTGS",
+    "beneficiaryId": "94025d49-8856-49bf-96bf-fb4a352c428a",
+    "principalAccountNumber": "005100100001689",
+    "principalIfsc": "UNBA0000005",
+    "name": "HARGOVIND PURSHOTTAM PANCHAL",
+    "txnAmount": 200000,
+    "transferTime": "TRANSFER_NOW",
+    "remarks": "Transaction initiated at 2025-05-30T08:56:45.057Z",  
+   "txnPassword": "{{transactionPassword}}",
+
+    "otpClaim": "965556",
+    "accountType": "Savings",
+    "referenceId": "eb625afb8f8ca93630a24c1891603f43bf86f92fab1baf4d6c70a1d7fa227204"
+}

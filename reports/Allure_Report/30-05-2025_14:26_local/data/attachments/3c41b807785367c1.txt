@@ -1,0 +1,18 @@
+level: log, messages: Payee Name stored:,pramila ramesh chanchani
+level: log, messages: Status Code:,200
+level: log, messages: Full Response:,{
+  "status": "success",
+  "data": {
+    "message": "Payee Added",
+    "payeeName": "pramila ramesh chanchani",
+    "creationDate": "2025-05-30T08:56:55.269934043Z"
+  },
+  "error": null,
+  "successfulResponse": true
+}
+level: log, messages: Status:,success
+level: log, messages: Message:,Payee Added
+level: log, messages: Payee Name:,pramila ramesh chanchani
+level: log, messages: Creation Date:,2025-05-30T08:56:55.269934043Z
+level: log, messages: Successful Response:,true
+level: log, messages: Error Field:,

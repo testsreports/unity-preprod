@@ -1,0 +1,55 @@
+level: log, messages: beneficiary ID:,601186e1-a7f8-47a6-acc8-af4b6505294d
+level: log, messages: Status Code:,200
+level: log, messages: Full Response:,{
+  "status": "success",
+  "data": {
+    "content": [
+      {
+        "beneficiaryId": "601186e1-a7f8-47a6-acc8-af4b6505294d",
+        "cifId": "2466054",
+        "beneficiaryNickName": "Rajat",
+        "beneficiaryName": "pramila ramesh chanchani",
+        "beneficiaryBankName": "UNITY",
+        "beneficiaryAccountNumber": "005100100007698",
+        "beneficiaryBankIfsc": "UNBA0000005",
+        "creationDate": "2025-05-30T08:58:23.079660Z",
+        "beneficiaryMobileNumber": "9118865507"
+      }
+    ],
+    "pageable": {
+      "pageNumber": 0,
+      "pageSize": 10,
+      "sort": {
+        "empty": false,
+        "sorted": true,
+        "unsorted": false
+      },
+      "offset": 0,
+      "paged": true,
+      "unpaged": false
+    },
+    "last": true,
+    "totalPages": 1,
+    "totalElements": 1,
+    "sort": {
+      "empty": false,
+      "sorted": true,
+      "unsorted": false
+    },
+    "size": 10,
+    "number": 0,
+    "first": true,
+    "numberOfElements": 1,
+    "empty": false
+  },
+  "error": null,
+  "successfulResponse": true
+}
+level: log, messages: Status:,success
+level: log, messages: Beneficiary Count:,1
+level: log, messages: Beneficiary ID:,601186e1-a7f8-47a6-acc8-af4b6505294d
+level: log, messages: Beneficiary Account Number:,005100100007698
+level: log, messages: Beneficiary IFSC:,UNBA0000005
+level: log, messages: Creation Date:,2025-05-30T08:58:23.079660Z
+level: log, messages: Successful Response:,true
+level: log, messages: Error Field:,
